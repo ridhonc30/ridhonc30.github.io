@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card UI Design</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons CSS -->
+    <link 
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" 
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+</head>
+<style>
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+</style>
+<body>
+    <div class="profile-card">
+        <div class="image">
+            <img src="IMG_9293.jpg" alt="" class="profile-img">
+        </div>
+
+        <div class="text-data">
+            <span class="name">Ridho Nur Cahyo</span>
+            <span class="job">College Student</span>
+        </div>
+
+        <div class="media-buttons">
+            <a href="https://www.instagram.com/ridho_rnc/" style="background: #e1306c;" class="link">
+                <i class='bx bxl-instagram'></i>
+            </a>
+            <a href="https://www.facebook.com/ridho.nurcahyo.790/" style="background-color: #4267b2;" class="link">
+                <i class='bx bxl-facebook'></i>
+            </a>
+            <a href="https://www.tiktok.com/@ridhornc_?lang=en" style="background-color: black;" class="link">
+                <i class='bx bxl-tiktok'></i>
+            </a>
+            <a href="https://twitter.com/ridhoogarfield" style="background: #1da1f2;" class="link">
+                <i class='bx bxl-twitter' ></i>
+            </a>
+        </div>
+
+        <div class="buttons">
+            <a href="mailto:ridhonurcahyo96@gmail.com">
+                <button class="button">E-mail</button>
+            </a>
+            <a href="https://wa.me/6281286910433/?">
+                <button class="button">WhatsApp</button>
+            </a>
+        </div>
+
+        <div class="analytics">
+            <div class="data" onclick="changeColor()">
+                <i id="heartIcon" class=" fas fa-heart"></i>
+                
+            </div>
+            <div class="data2">
+                <i class="fas fa-share-alt" ></i>
+
+        
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk merubah warna tombol "Love" dan ikon hati
+        function changeColor() {
+            var heartIcon = document.getElementById("heartIcon");
+    
+            // Cek apakah ikon hati sudah diklik
+            if (heartIcon.style.color !== "red") {
+                // Jika belum diklik, atur warna merah
+                heartIcon.style.color = "red";
+            } else {
+                // Jika sudah diklik, atur kembali ke warna awal
+                heartIcon.style.color = "#929292";
+            }
+        }
+        
+    </script>
+
+    <script>
+     const shareBtn = document.querySelector('.share-btn');
+     const shareOptions = document.querySelector('.share-options');
+
+     shareBtn.addEventListener('click', () => {
+        shareOptions.classList.toggle('active');
+     })
+    </script>
+
+</body>
+</html>
